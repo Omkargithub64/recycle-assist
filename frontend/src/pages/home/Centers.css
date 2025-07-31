@@ -1,0 +1,71 @@
+/* Centers.css */
+body {
+  margin: 0;
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.centers-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.centers-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.centers-header h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #0056b3;
+}
+
+.centers-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.center-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  border-left: 6px solid #28a745;
+}
+
+.center-card h3 {
+  margin: 0 0 0.5rem;
+  color: #333;
+}
+
+.center-card p {
+  margin: 0.4rem 0;
+  color: #555;
+}
+
+.map-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.map-link:hover {
+  text-decoration: underline;
+}

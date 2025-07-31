@@ -1,0 +1,86 @@
+/* Result.css */
+body {
+    margin: 0;
+    background-color: #f5f7fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.result-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.result-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.result-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1.2rem;
+}
+
+.item-info {
+    margin-bottom: 1rem;
+}
+
+.item-name {
+    font-size: 1.5rem;
+    color: #444;
+}
+
+.item-category {
+    font-size: 1rem;
+    color: #555;
+}
+
+.category-tag {
+    background-color: #28a745;
+    color: white;
+    padding: 0.25rem 0.6rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.llm-explanation {
+    background-color: #f0f2f5;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.llm-explanation h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.center-button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.center-button:hover {
+    background-color: #0056b3;
+}
