@@ -1,46 +1,67 @@
 /* Result.css */
+
 body {
     margin: 0;
-    background-color: #f5f7fa;
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
 }
 
 .result-container {
     min-height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
 .result-card {
-    background-color: white;
+    background-color: #fff;
     padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    width: 100%;
-    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    width: 80%;
     text-align: center;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .result-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #333;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #222;
+    font-weight: 600;
 }
 
 .result-image img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 1.2rem;
+    max-width: 50%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
 }
 
 .item-info {
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
 }
 
 .item-name {
-    font-size: 1.5rem;
-    color: #444;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #2a2a2a;
+    margin-bottom: 0.3rem;
 }
 
 .item-category {
@@ -49,38 +70,56 @@ body {
 }
 
 .category-tag {
-    background-color: #28a745;
+    background-color: #38c172;
     color: white;
-    padding: 0.25rem 0.6rem;
-    border-radius: 5px;
-    font-size: 0.9rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
     font-weight: 500;
+    display: inline-block;
+    margin-top: 0.3rem;
 }
 
 .llm-explanation {
-    background-color: #f0f2f5;
-    padding: 1rem;
-    margin: 1rem 0;
+    background-color: #f9fafb;
+    padding: 1rem 1.2rem;
+    margin: 1.5rem 0;
+    border-left: 4px solid #007bff;
     border-radius: 10px;
     text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
-.llm-explanation h3 {
-    margin-top: 0;
-    color: #333;
+.llm-explanation p {
+    margin: 0;
+    color: #444;
+    white-space: pre-line;
 }
 
 .center-button {
     background-color: #007bff;
     color: white;
-    padding: 0.75rem 1.25rem;
+    padding: 0.75rem 1.4rem;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     font-size: 1rem;
+    font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .center-button:hover {
     background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.steps-list {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.steps-list li {
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
 }

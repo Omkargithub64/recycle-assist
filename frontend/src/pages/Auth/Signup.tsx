@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import './Signup.css';
 import { useState } from "react";
 import axios  from "axios";
+import base_url from "../../components/node_base_url";
 
 
 
@@ -19,7 +20,7 @@ export default function Signup() {
     const handleSubmit = (event : React.FormEvent)=>{
         event.preventDefault();
         console.log(values)
-        axios.post('http://localhost:8081/signup', values)
+        axios.post(`${base_url}/signup`, values)
         .then(res => {
             if(res.data.Status){
                 navigate('/')

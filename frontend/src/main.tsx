@@ -5,7 +5,7 @@ import './index.css'
 import Layout from './Layout'
 import Home from './pages/home/Home'
 import Result from './pages/home/Result'
-import Centers from './pages/home/centers'
+import Centers from './pages/home/Centers'
 import { StrictMode } from 'react'
 import Login from './pages/Auth/Login'
 import Signup from './pages/Auth/Signup'
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
         path: "",
         element: <Home></Home>,
       },
-      { path: "result", element: <Result></Result> },
+      { path: "result/:id", element: <Result></Result> },
       {
         path: "centers",
         element: <Centers></Centers>

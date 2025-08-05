@@ -1,6 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom"
 import './Navbar.css'
 import axios from "axios"
+import base_url from "./node_base_url"
 
 function Navbar() {
 
@@ -8,7 +9,7 @@ function Navbar() {
     axios.defaults.withCredentials = true
 
     const handellogout = () => {
-        axios.get('http://localhost:8081/logout')
+        axios.get(`${base_url}/logout`)
             .then(
                 res => {
                     if (res.data.Status === "Sucess") {

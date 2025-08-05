@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom"
 import "./Auth.css"
 import { useState } from "react"
 import axios from "axios";
+import base_url from "../../components/node_base_url";
+// import baseur
 
 
 function Login() {
@@ -14,17 +16,17 @@ function Login() {
     });
 
     const navigate = useNavigate();
-    axios.defaults.withCredentials = true;
 
     const handellogin = (event : React.FormEvent) => {
         event.preventDefault();
 
-        axios.post('http://localhost:8081/login', lvalues)
+
+        axios.post(`${base_url}/login`, lvalues, {withCredentials:true})
             .then(res => {
                 if (res.data.Status === "Sucess") {
                     navigate('/home')
                 } else {
-                    alert(res.data.Error)
+                    console.log(res.data.Error)
                 }
             })
 
